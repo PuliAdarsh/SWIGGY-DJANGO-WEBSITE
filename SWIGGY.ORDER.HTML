@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+body{
+  font-family: Calibri, Helvetica, sans-serif;
+  background-color:black
+;
+}
+.container {
+    padding: 50px;
+  background-color:#EC7063
+;
+}
+
+input[type=text],  textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+input[type=text]:focus {
+  background-color:#E6E6FA
+;
+  outline: none;
+}
+div {
+            padding: 10px 0;
+         }
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+.registerbtn {
+  background-color:#28C5CF;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+.registerbtn:hover {
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+<form method="POST" action="/">
+  {% csrf_token %}
+  <div class="container">
+  <center>  <h1> <i>ONLINE ORDER</i></h1> </center>
+
+<hr>
+Name :
+<input type="text" name="name" /><br>
+<br>
+Address :
+<textarea name="address" cols="20" rows="6"></textarea><br>
+<br>
+Mobile Number :
+<input type="text" name="mob"  /><br>
+<br>
+Email ID :
+<input type="text" name="email"  /><br>
+<br>
+Ordered Date :
+<input type="Date" name="Ordered Date"  /><br>
+<br>
+item:
+<input type="text" name="item"  /><br>
+<br>
+Price:
+<input type="text" name="price"  /><br>
+<br>
+<button type="submit" class="registerbtn">Submit</button>
+</div>
+</form>
+</body>
+</html>
